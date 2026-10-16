@@ -1,4 +1,4 @@
 interface:
-  display_name: "AcademyOps — Education Platform Builder"
-  short_description: "Build customizable education operations platforms"
-  default_prompt: "Use $academyops to build an independent education management platform for my academy."
+  display_name: "AcademyOps — Education Platform Builder / 教务平台构建"
+  short_description: "Build education platforms / 构建可定制的教育管理平台"
+  default_prompt: "Use $academyops to build an independent education management platform for my academy / 使用 $academyops 为我的机构构建独立的教育管理平台。"
