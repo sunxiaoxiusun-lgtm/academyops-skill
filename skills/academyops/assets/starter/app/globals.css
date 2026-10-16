@@ -1,0 +1,237 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility scrollbar-gutter-stable {
+  scrollbar-gutter: stable;
+}
+
+:root {
+  --background: #f5f7fb;
+  --foreground: #102f56;
+  --card: #ffffff;
+  --card-foreground: #102f56;
+  --popover: #ffffff;
+  --popover-foreground: #102f56;
+  --primary: #174f87;
+  --primary-foreground: #ffffff;
+  --secondary: #fff3c4;
+  --secondary-foreground: #5b4600;
+  --muted: #edf2f8;
+  --muted-foreground: #607087;
+  --accent: #e8f1fb;
+  --accent-foreground: #174f87;
+  --destructive: #c2393f;
+  --border: #d8e1ec;
+  --input: #c8d5e4;
+  --ring: #e0ad22;
+  --chart-1: #174f87;
+  --chart-2: #e0ad22;
+  --chart-3: #2f76b7;
+  --chart-4: #6741d9;
+  --chart-5: #c2255c;
+  --radius: 0.75rem;
+  --sidebar: #102f56;
+  --sidebar-foreground: #f4f7fb;
+  --sidebar-primary: #e5b529;
+  --sidebar-primary-foreground: #102f56;
+  --sidebar-accent: #1d4775;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #2b527d;
+  --sidebar-ring: #e5b529;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+* {
+  border-color: var(--border);
+}
+
+::selection {
+  background: #ffe58a;
+  color: #102f56;
+}
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.875rem;
+  background: #ffffff;
+  scrollbar-gutter: stable;
+}
+
+.table-scroll table {
+  width: 100%;
+  min-width: max(48rem, 100%);
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.table-scroll th {
+  padding: 0.75rem 1rem;
+  background: #f3f7fb;
+  color: #39536f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table-scroll td {
+  padding: 0.875rem 1rem;
+  border-top: 1px solid #e8eef5;
+  color: #183858;
+  vertical-align: top;
+}
+
+.table-scroll th + th,
+.table-scroll td + td {
+  border-left: 1px solid #eef2f7;
+}
+
+.table-scroll th:first-child,
+.table-scroll td:first-child {
+  min-width: 10rem;
+}
+
+.table-scroll th:last-child,
+.table-scroll td:last-child {
+  min-width: 9rem;
+}
+
+.table-scroll table:has(th:nth-child(5)) {
+  min-width: max(50rem, 100%);
+}
+
+.table-scroll table:has(th:nth-child(6)) {
+  min-width: max(58rem, 100%);
+}
+
+.table-scroll table:has(th:nth-child(7)) {
+  min-width: max(68rem, 100%);
+}
+
+.table-scroll table:has(th:nth-child(8)) {
+  min-width: max(78rem, 100%);
+}
+
+.table-scroll table:has(th:nth-child(9)) {
+  min-width: max(92rem, 100%);
+}
+
+.table-scroll tbody tr:first-child td {
+  border-top-color: #d8e1ec;
+}
+
+.table-scroll tbody tr:nth-child(even) {
+  background: #f9fbfd;
+}
+
+.table-scroll tbody tr:hover {
+  background: #f1f7fd;
+}
+
+.table-scroll td > b {
+  display: block;
+  color: #102f56;
+  font-weight: 650;
+}
+
+.table-scroll td > small {
+  display: block;
+  margin-top: 0.25rem;
+  color: #607087;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.table-scroll th.text-right,
+.table-scroll td.text-right {
+  text-align: right;
+}
+
+.table-scroll .enrollment-table {
+  min-width: 77.5rem;
+  table-layout: fixed;
+}
+
+.table-scroll .consultant-summary-table {
+  min-width: 51.25rem;
+}
+
+.table-scroll .student-history-table {
+  min-width: 61.25rem;
+}
+
+.table-scroll .audit-table {
+  min-width: 70rem;
+}
+
+@media (max-width: 640px) {
+  .table-scroll th,
+  .table-scroll td {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}

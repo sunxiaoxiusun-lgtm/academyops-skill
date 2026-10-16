@@ -1,0 +1,11 @@
+{
+  "organization": {
+    "displayName": "Your Academy",
+    "legalName": "Your Academy",
+    "registrationNumber": "",
+    "invoiceAddressLines": [],
+    "logoPath": "/organization-logo.svg",
+    "sealPath": ""
+  },
+  "teachers": ["Teacher One", "Teacher Two"]
+}

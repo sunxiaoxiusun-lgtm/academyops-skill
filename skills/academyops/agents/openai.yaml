@@ -1,0 +1,4 @@
+interface:
+  display_name: "AcademyOps — Education Platform Builder"
+  short_description: "Build customizable education operations platforms"
+  default_prompt: "Use $academyops to build an independent education management platform for my academy."
